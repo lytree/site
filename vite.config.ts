@@ -3,7 +3,9 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
+
+// vite.config.ts
+import VueRouter from 'unplugin-vue-router/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Components from 'unplugin-vue-components/vite'
 import {
@@ -14,6 +16,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 export default defineConfig({
   resolve: {
@@ -22,6 +25,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    // https://github.com/hannoeru/vite-plugin-pages
+    VueRouter({ extensions: ['.vue', '.md'] }),
+
     VueMacros({
       defineOptions: false,
       defineModels: false,
@@ -35,15 +41,11 @@ export default defineConfig({
         }),
       },
     }),
-
-    // https://github.com/hannoeru/vite-plugin-pages
-    Pages({ extensions: ['vue', 'md'], }),
-
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
       imports: [
         'vue',
-        'vue-router',
+        VueRouterAutoImports,
         '@vueuse/core',
       ],
       dts: true,
@@ -97,9 +99,9 @@ export default defineConfig({
         // 一些配置
       },
       scss: {
-        additionalData: '@import "./src/styles/main.scss";'
-      }
-    }
+        additionalData: '@import "./src/styles/main.scss";',
+      },
+    },
   },
 
   // https://github.com/vitest-dev/vitest

@@ -1,9 +1,10 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import routes from 'virtual:generated-pages'
-import App from './App.vue'
+import { createRouter, createWebHistory } from 'vue-router/auto'
+import { routes } from 'vue-router/auto/routes'
 import { createHead } from '@unhead/vue'
+import App from './App.vue'
 import '@unocss/reset/tailwind.css'
+
 // import './styles/main.scss'
 import 'uno.css'
 
