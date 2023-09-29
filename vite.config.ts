@@ -7,11 +7,12 @@ import Pages from 'vite-plugin-pages'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Components from 'unplugin-vue-components/vite'
 import {
-
   ElementPlusResolver,
 } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
+import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
+import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
 
 export default defineConfig({
@@ -36,7 +37,7 @@ export default defineConfig({
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
-    Pages(),
+    Pages({ extensions: ['vue', 'md'], }),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -48,12 +49,17 @@ export default defineConfig({
       dts: true,
       dirs: [
         './src/composables',
+        './src/stores',
       ],
       vueTemplate: true,
     }),
 
     // https://github.com/antfu/vite-plugin-components
     Components({
+      // allow auto load markdown components under `./src/components/`
+      extensions: ['vue', 'md'],
+      // allow auto import and register components used in markdown
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [ElementPlusResolver()],
       dts: true,
     }),
@@ -61,7 +67,28 @@ export default defineConfig({
     // https://github.com/antfu/unocss
     // see uno.config.ts for config
     UnoCSS(),
-    Markdown({ /* options */ }),
+    Markdown({
+      headEnabled: 'unhead',
+      markdownItOptions: {},
+      markdownItUses: [],
+      wrapperClasses: 'prose prose-sm m-auto text-left',
+      markdownItSetup(md) {
+        // https://prismjs.com/
+        md.use(Shiki, {
+          theme: {
+            light: 'vitesse-light',
+            dark: 'vitesse-dark',
+          },
+        })
+        md.use(LinkAttributes, {
+          matcher: (link: string) => /^https?:\/\//.test(link),
+          attrs: {
+            target: '_blank',
+            rel: 'noopener',
+          },
+        })
+      },
+    }),
   ],
 
   css: {

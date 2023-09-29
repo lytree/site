@@ -31,6 +31,9 @@ devDependencies:
   '@iconify-json/carbon':
     specifier: ^1.1.21
     version: 1.1.21
+  '@types/markdown-it-link-attributes':
+    specifier: ^3.0.2
+    version: 3.0.2
   '@types/node':
     specifier: ^20.7.1
     version: 20.7.1
@@ -67,12 +70,21 @@ devDependencies:
   lint-staged:
     specifier: ^14.0.1
     version: 14.0.1
+  markdown-it-link-attributes:
+    specifier: ^4.0.1
+    version: 4.0.1
+  markdown-it-shiki:
+    specifier: ^0.9.0
+    version: 0.9.0
   pnpm:
     specifier: ^8.8.0
     version: 8.8.0
   sass:
     specifier: ^1.68.0
     version: 1.68.0
+  shiki:
+    specifier: ^0.14.4
+    version: 0.14.4
   simple-git-hooks:
     specifier: ^2.9.0
     version: 2.9.0
@@ -900,6 +912,12 @@ packages:
   /@types/lodash@4.14.199:
     resolution: {integrity: sha512-Vrjz5N5Ia4SEzWWgIVwnHNEnb1UE1XMkvY5DGXrAeOGE9imk0hgTHh5GyDjLDJi9OTCn9oo9dXH1uToK1VRfrg==}
     dev: false
+
+  /@types/markdown-it-link-attributes@3.0.2:
+    resolution: {integrity: sha512-jTFAOOjIwHultKsrA/ni761/KOExLBr0R7IQr5Pp8KLhf06xs+7L3EHEXUcnlDCQtnDEBiC/Bz650+IcfNKbMw==}
+    dependencies:
+      '@types/markdown-it': 13.0.2
+    dev: true
 
   /@types/markdown-it@13.0.2:
     resolution: {integrity: sha512-Tla7hH9oeXHOlJyBFdoqV61xWE9FZf/y2g+gFVwQ2vE1/eBzjUno5JCd3Hdb5oATve5OF6xNjZ/4VIZhVVx+hA==}
@@ -2043,6 +2061,10 @@ packages:
   /ansi-regex@6.0.1:
     resolution: {integrity: sha512-n5M855fKb2SsfMIiFFoVrABHJC8QtHwVx+mHWP3QcEqBHYienj5dHSgjbxtC0WEZXYt4wcD6zrQElDPhFuZgfA==}
     engines: {node: '>=12'}
+    dev: true
+
+  /ansi-sequence-parser@1.1.1:
+    resolution: {integrity: sha512-vJXt3yiaUL4UU546s3rPXlsry/RnM730G1+HkpKE012AN0sx1eOrxSu95oKDIonskeLTijMgqWZ3uDEe3NFvyg==}
     dev: true
 
   /ansi-styles@3.2.1:
@@ -4370,6 +4392,17 @@ packages:
       - supports-color
     dev: true
 
+  /markdown-it-link-attributes@4.0.1:
+    resolution: {integrity: sha512-pg5OK0jPLg62H4k7M9mRJLT61gUp9nvG0XveKYHMOOluASo9OEF13WlXrpAp2aj35LbedAy3QOCgQCw0tkLKAQ==}
+    dev: true
+
+  /markdown-it-shiki@0.9.0:
+    resolution: {integrity: sha512-TyP5YbDnFu3T7MPwC8jFs1swzAXqALy50MPPdis2tNc5MQ0UxSqhARFfMzEJN21mE0ihAngi2kqDzKR5+ZsMqg==}
+    dependencies:
+      shiki: 0.14.4
+      synckit: 0.8.5
+    dev: true
+
   /markdown-it@13.0.2:
     resolution: {integrity: sha512-FtwnEuuK+2yVU7goGn/MJ0WBZMM9ZPgU9spqlFs7/A/pDIUNSOQZhUgOqYCficIuR2QaFnrt8LHqBWsbTAoI5w==}
     hasBin: true
@@ -5389,6 +5422,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /shiki@0.14.4:
+    resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
+    dependencies:
+      ansi-sequence-parser: 1.1.1
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
+    dev: true
+
   /side-channel@1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
@@ -6246,6 +6288,14 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vscode-oniguruma@1.7.0:
+    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
+    dev: true
+
+  /vscode-textmate@8.0.0:
+    resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
     dev: true
 
   /vue-component-type-helpers@1.8.4:
