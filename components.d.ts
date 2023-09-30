@@ -7,13 +7,18 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Dark: typeof import('./src/components/common/ThemeToggler/components/Dark.vue')['default']
     ElSpace: typeof import('element-plus/es')['ElSpace']
     ElSpan: typeof import('element-plus/es')['ElSpan']
+    ElSwitch: typeof import('element-plus/es')['ElSwitch']
     GFooter: typeof import('./src/components/layout/GFooter.vue')['default']
+    GHeader: typeof import('./src/components/layout/GHeader.vue')['default']
+    Light: typeof import('./src/components/common/ThemeToggler/components/Light.vue')['default']
+    NavFooter: typeof import('./src/components/nav/NavFooter.vue')['default']
+    NavHeader: typeof import('./src/components/nav/NavHeader.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TheCounter: typeof import('./src/components/TheCounter.vue')['default']
-    TheFooter: typeof import('./src/components/TheFooter.vue')['default']
-    TheInput: typeof import('./src/components/TheInput.vue')['default']
+    Switch: typeof import('./src/components/common/ThemeToggler/components/Switch.vue')['default']
+    ThemeToggler: typeof import('./src/components/common/ThemeToggler/index.vue')['default']
   }
 }

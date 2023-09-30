@@ -3,6 +3,7 @@
 import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // vite.config.ts
 import VueRouter from 'unplugin-vue-router/vite'
@@ -15,7 +16,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
-import VueMacros from 'unplugin-vue-macros/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 
 export default defineConfig({
@@ -28,17 +28,12 @@ export default defineConfig({
     // https://github.com/hannoeru/vite-plugin-pages
     VueRouter({ extensions: ['.vue', '.md'] }),
 
-    VueMacros({
-      defineOptions: false,
-      defineModels: false,
-      plugins: {
-        vue: Vue({
-          include: [/\.vue$/, /\.md$/], // <-- allows Vue to compile Markdown files
-          script: {
-            propsDestructure: true,
-            defineModel: true,
-          },
-        }),
+    vueJsx({}),
+    Vue({
+      include: [/\.vue$/, /\.md$/], // <-- allows Vue to compile Markdown files
+      script: {
+        propsDestructure: true,
+        defineModel: true,
       },
     }),
     // https://github.com/antfu/unplugin-auto-import
@@ -95,11 +90,8 @@ export default defineConfig({
 
   css: {
     preprocessorOptions: {
-      postcss: {
-        // 一些配置
-      },
       scss: {
-        additionalData: '@import "./src/styles/main.scss";',
+        additionalData: '@import "./src/styles/scss/main.scss";',
       },
     },
   },

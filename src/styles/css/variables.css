@@ -1,0 +1,25 @@
+/**
+* Layout variables
+*/
+:root {
+  --layout-nav-header-height: 64px;
+  --layout-max-width: 1440px;
+  --layout-nav-header-z-index: 10;
+}
+
+
+/**
+ * Colors Theme
+ * -------------------------------------------------------------------------- */
+
+:root: {
+  --border-color: var(--el-border-color);
+  --border-color-light: var(--el-border-color-lighter);
+  --bg-color-mute: #f2f2f2;
+  --site-bg-color: #ffffff;
+}
+
+.dark {
+  --bg-color-mute: #2c2c2c;
+  --site-bg-color: #1a1a1a;
+}

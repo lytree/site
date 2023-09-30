@@ -1,6 +1,6 @@
 {
   "files.associations": {
-    "*.css": "postcss"
+    "*.css": "css"
   },
   // Disable the default formatter
   "prettier.enable": false,
