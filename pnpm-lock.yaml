@@ -35,8 +35,8 @@ devDependencies:
     specifier: ^3.0.2
     version: 3.0.2
   '@types/node':
-    specifier: ^20.7.1
-    version: 20.7.1
+    specifier: ^20.8.0
+    version: 20.8.0
   '@unhead/vue':
     specifier: ^1.7.4
     version: 1.7.4(vue@3.3.4)
@@ -117,7 +117,7 @@ devDependencies:
     version: 0.7.0(vue-router@4.2.5)(vue@3.3.4)
   vite:
     specifier: ^4.4.9
-    version: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+    version: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
   vitest:
     specifier: ^0.34.6
     version: 0.34.6(jsdom@22.1.0)(sass@1.68.0)
@@ -151,7 +151,7 @@ packages:
       eslint: 8.50.0
       eslint-config-flat-gitignore: 0.1.0
       eslint-define-config: 1.23.0
-      eslint-plugin-antfu: 1.0.0-beta.8(eslint@8.50.0)(typescript@5.2.2)
+      eslint-plugin-antfu: 1.0.0-beta.9(eslint@8.50.0)(typescript@5.2.2)
       eslint-plugin-eslint-comments: 3.2.0(eslint@8.50.0)
       eslint-plugin-i: 2.28.1(@typescript-eslint/parser@6.7.3)(eslint@8.50.0)
       eslint-plugin-jsdoc: 46.8.2(eslint@8.50.0)
@@ -1175,8 +1175,8 @@ packages:
     resolution: {integrity: sha512-T5k6kTXak79gwmIOaDF2UUQXFbnBE0zBUzF20pz7wDYu0RQMzWg+Ml/Pz50214NsFHBITkoi5VtdjFZnJ2ijjA==}
     dev: true
 
-  /@types/node@20.7.1:
-    resolution: {integrity: sha512-LT+OIXpp2kj4E2S/p91BMe+VgGX2+lfO+XTpfXhh+bCk2LkQtHZSub8ewFBMGP5ClysPjTDFa4sMI8Q3n4T0wg==}
+  /@types/node@20.8.0:
+    resolution: {integrity: sha512-LzcWltT83s1bthcvjBmiBvGJiiUe84NWRHkw+ZV6Fr41z2FbIzvc815dk2nQ3RAKMuN2fkenM/z3Xv2QzEpYxQ==}
     dev: true
 
   /@types/normalize-package-data@2.4.2:
@@ -1372,7 +1372,7 @@ packages:
       '@unocss/core': 0.56.4
       '@unocss/reset': 0.56.4
       '@unocss/vite': 0.56.4(vite@4.4.9)
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1589,7 +1589,7 @@ packages:
       chokidar: 3.5.3
       fast-glob: 3.3.1
       magic-string: 0.30.4
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -1604,7 +1604,7 @@ packages:
       '@babel/core': 7.23.0
       '@babel/plugin-transform-typescript': 7.22.15(@babel/core@7.23.0)
       '@vue/babel-plugin-jsx': 1.1.5(@babel/core@7.23.0)
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
       vue: 3.3.4
     transitivePeerDependencies:
       - supports-color
@@ -1617,7 +1617,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
       vue: 3.3.4
     dev: true
 
@@ -2875,8 +2875,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-antfu@1.0.0-beta.8(eslint@8.50.0)(typescript@5.2.2):
-    resolution: {integrity: sha512-RUUG+kE3kWU02L32iIUSbZPHTb6bgUUA7h97GQPfkqlodOz2Yj9HDe/DDCRB01WGBIYWPEAZMEWI7T4TVutfTQ==}
+  /eslint-plugin-antfu@1.0.0-beta.9(eslint@8.50.0)(typescript@5.2.2):
+    resolution: {integrity: sha512-lubf1lvnoft2YV+mNfcK0fj4MSlhcnY45IX30uBRMkWhtjnpv7fk1UC7VWLCGQizQIpRAxPtPf63ravXZVRX1w==}
     dependencies:
       '@typescript-eslint/utils': 6.7.3(eslint@8.50.0)(typescript@5.2.2)
     transitivePeerDependencies:
@@ -5696,7 +5696,7 @@ packages:
       '@unocss/transformer-directives': 0.56.4
       '@unocss/transformer-variant-group': 0.56.4
       '@unocss/vite': 0.56.4(vite@4.4.9)
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
     transitivePeerDependencies:
       - postcss
       - rollup
@@ -5769,7 +5769,7 @@ packages:
       '@types/markdown-it': 13.0.2
       markdown-it: 13.0.2
       unplugin: 1.5.0
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
     transitivePeerDependencies:
       - rollup
     dev: true
@@ -5857,7 +5857,7 @@ packages:
       builtins: 5.0.1
     dev: true
 
-  /vite-node@0.34.6(@types/node@20.7.1)(sass@1.68.0):
+  /vite-node@0.34.6(@types/node@20.8.0)(sass@1.68.0):
     resolution: {integrity: sha512-nlBMJ9x6n7/Amaz6F3zJ97EBwR2FkzhBRxF5e+jE6LA3yi6Wtc2lyTij1OnDMIr34v5g/tVQtsVAzhT0jc5ygA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -5867,7 +5867,7 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5879,7 +5879,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.4.9(@types/node@20.7.1)(sass@1.68.0):
+  /vite@4.4.9(@types/node@20.8.0)(sass@1.68.0):
     resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -5907,7 +5907,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.7.1
+      '@types/node': 20.8.0
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.4
@@ -5949,7 +5949,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.6
       '@types/chai-subset': 1.3.3
-      '@types/node': 20.7.1
+      '@types/node': 20.8.0
       '@vitest/expect': 0.34.6
       '@vitest/runner': 0.34.6
       '@vitest/snapshot': 0.34.6
@@ -5969,8 +5969,8 @@ packages:
       strip-literal: 1.3.0
       tinybench: 2.5.1
       tinypool: 0.7.0
-      vite: 4.4.9(@types/node@20.7.1)(sass@1.68.0)
-      vite-node: 0.34.6(@types/node@20.7.1)(sass@1.68.0)
+      vite: 4.4.9(@types/node@20.8.0)(sass@1.68.0)
+      vite-node: 0.34.6(@types/node@20.8.0)(sass@1.68.0)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less

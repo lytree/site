@@ -5,9 +5,7 @@
     <div class="content">
       <p class="copyright">
         <slot name="copyright">
-          Copyright © 2019 - 2023 <button icon-btn @click="toggleDark()">
-            <div i-carbon-sun dark:i-carbon-moon />
-          </button>
+          Copyright © 2019 - 2023
         </slot>
       </p>
 
@@ -30,14 +28,14 @@
 
 <style  lang="scss" scoped>
 .footer {
-  --at-apply: z-10 md:p-[32px] border-top;
+  --at-apply: z-10 md:p-[16px] border-top;
 
   .content {
     --at-apply: my-0 mx-auto max-w-[var(--layout-max-width)] text-center;
 
     .copyright,
     .message {
-      --at-apply: text-sm font-medium leading-[24px];
+      --at-apply: text-sm m-0 font-medium leading-[24px];
       transition: color 0.25s;
     }
   }

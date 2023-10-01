@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
@@ -16,9 +15,7 @@
       </a>
     </template>
     <template #navbar-context>
-      <div class="appearance">
-        <ThemeToggler />
-      </div>
+      <NavThemeToggler class="theme-toggler" />
     </template>
   </GHeader>
 </template>

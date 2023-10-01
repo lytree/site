@@ -16,6 +16,7 @@ declare module 'vue' {
     Light: typeof import('./src/components/common/ThemeToggler/components/Light.vue')['default']
     NavFooter: typeof import('./src/components/nav/NavFooter.vue')['default']
     NavHeader: typeof import('./src/components/nav/NavHeader.vue')['default']
+    NavThemeToggler: typeof import('./src/components/nav/components/NavThemeToggler.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Switch: typeof import('./src/components/common/ThemeToggler/components/Switch.vue')['default']

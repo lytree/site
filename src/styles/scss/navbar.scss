@@ -15,14 +15,6 @@
   -webkit-backdrop-filter: saturate(50%) blur(4px);
   top: 0;
 
-  @include respond-to('md') {
-    padding: 0 12px 0 32px;
-  }
-
-  @include respond-to('xlg') {
-    padding: 0 32px;
-  }
-
   .header-container {
     display: flex;
     justify-content: space-between;
@@ -33,21 +25,6 @@
       justify-content: flex-end;
       align-items: center;
       flex-grow: 1;
-    }
-
-    @include respond-to('xxl') {
-      max-width: calc(var(--vp-screen-max-width));
-    }
-
-    @include respond-to('max') {
-      // 36 = 2 * 18 for each side.
-      max-width: calc(var(--vp-screen-max-width));
-    }
-  }
-
-  @include respond-to('md') {
-    .content {
-      padding-top: 1px;
     }
   }
 }
@@ -64,14 +41,14 @@
   }
 }
 
-.menu + .appearance {
+.menu+.appearance {
   margin-left: 8px;
 }
 
-.menu + .social-links {
+.menu+.social-links {
   margin-left: 12px;
 }
 
-.appearance + .social-links {
+.appearance+.social-links {
   margin-left: 12px;
 }

@@ -4,8 +4,10 @@ import { routes } from 'vue-router/auto/routes'
 import { createHead } from '@unhead/vue'
 import App from './App.vue'
 import '@unocss/reset/tailwind.css'
-import './styles/css/index.css'
 import 'uno.css'
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
+import './styles/css/index.css'
 
 const app = createApp(App)
 const router = createRouter({

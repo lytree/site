@@ -19,7 +19,7 @@ watch(
 </template>
 
 <style lang="scss" scoped>
-:deep(.el-switch) {
+:deep(.el-switch__core) {
   --el-switch-on-color: var(--bg-color-mute);
   --el-switch-off-color: var(--bg-color-mute);
   --el-switch-border-color: var(--border-color);
