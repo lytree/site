@@ -4,10 +4,8 @@ import DarkIcon from './components/Dark.vue'
 import LightIcon from './components/Light.vue'
 import { isDark, toggleDark } from '~/composables/dark'
 
-const darkMode = ref(isDark.value)
-
 watch(
-  () => darkMode.value,
+  () => isDark.value,
   () => {
     toggleDark()
   },
@@ -15,7 +13,7 @@ watch(
 </script>
 
 <template>
-  <ElSwitch v-model="darkMode" :active-action-icon="DarkIcon" :inactive-action-icon="LightIcon" />
+  <ElSwitch v-model="isDark" :active-action-icon="DarkIcon" :inactive-action-icon="LightIcon" />
 </template>
 
 <style lang="scss" scoped>

@@ -38,8 +38,9 @@
   <canvas />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #wrapper {
+  --at-apply: gray-700 dark:gray-200;
   position: absolute;
   top: 38.2%;
   left: 50%;
@@ -68,6 +69,7 @@ canvas {
 }
 
 .footer {
+  --at-apply: gray-700 dark:gray-200;
   width: 100%;
   position: absolute;
   bottom: 10px;

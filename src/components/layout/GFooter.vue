@@ -6,6 +6,9 @@
       <p class="copyright">
         <slot name="copyright">
           Copyright © 2019 - 2023
+          <button icon-btn @click="toggleDark()">
+            <div class="i-carbon-sun dark:i-carbon-moon" />
+          </button>
         </slot>
       </p>
 
