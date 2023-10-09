@@ -3,7 +3,6 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
 } from 'unocss'
 
@@ -28,12 +27,12 @@ export default defineConfig({
       warn: true,
     }),
 
-    presetWebFonts({
-      fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
-      },
-    }),
+    // presetWebFonts({
+    //   fonts: {
+    //     sans: 'DM Sans',
+    //     serif: 'DM Serif Display',
+    //     mono: 'DM Mono',
+    //   },
+    // }),
   ],
 })
