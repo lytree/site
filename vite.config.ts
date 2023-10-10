@@ -17,6 +17,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
   resolve: {
@@ -26,7 +27,12 @@ export default defineConfig({
   },
   plugins: [
     // https://github.com/hannoeru/vite-plugin-pages
-    VueRouter({ extensions: ['.vue', '.md'] }),
+    VueRouter({
+      routesFolder: 'src/pages',
+      extensions: ['.vue', '.md'],
+      dts: 'src/typed-router.d.ts',
+
+    }),
 
     vueJsx({}),
     Vue({
@@ -43,7 +49,7 @@ export default defineConfig({
         VueRouterAutoImports,
         '@vueuse/core',
       ],
-      dts: true,
+      dts: 'src/auto-imports.d.ts',
       dirs: [
         './src/composables',
         './src/stores',
@@ -58,7 +64,8 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       resolvers: [ElementPlusResolver()],
-      dts: true,
+
+      dts: 'src/components.d.ts',
     }),
 
     // https://github.com/antfu/unocss
@@ -68,7 +75,6 @@ export default defineConfig({
       headEnabled: 'unhead',
       markdownItOptions: {},
       markdownItUses: [],
-      wrapperClasses: 'prose prose-sm m-auto text-left',
       markdownItSetup(md) {
         // https://prismjs.com/
         md.use(Shiki, {
@@ -86,6 +92,7 @@ export default defineConfig({
         })
       },
     }),
+    VueDevTools(),
   ],
 
   css: {

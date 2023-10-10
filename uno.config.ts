@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
   transformerDirectives,
 } from 'unocss'
@@ -26,7 +27,15 @@ export default defineConfig({
       scale: 1.2,
       warn: true,
     }),
-
+    presetTypography({
+      selectorName: 'markdown',
+      cssExtend: {
+        '*': {
+          'text-align': 'left',
+        },
+        'p img': { display: 'block', margin: '0 auto' },
+      },
+    }),
     // presetWebFonts({
     //   fonts: {
     //     sans: 'DM Sans',
