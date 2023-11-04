@@ -20,6 +20,15 @@ export default defineConfig({
     ['border-top', 'border-t-[1px]  light:border-t-[#3c3c3c1f] dark:border-t-[#5454547a] border-solid'],
     ['border-bottom', 'border-b-[1px]  light:border-b-[#3c3c3c1f] dark:border-b-[#5454547a] border-solid'],
   ],
+  theme: {
+    breakpoints: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
+  },
   presets: [
     presetUno(),
     presetAttributify(),

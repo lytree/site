@@ -1,21 +1,24 @@
-<script setup lang="tsx">
-import { NAV_DATA } from "./data"
+<script setup lang="ts">
+import { NAV_DATA } from './data'
 </script>
+
 <template>
   <div class="min-h-[100vh] w-[100vw] flex flex-col">
     <header class="header">
       <NavHeader />
     </header>
     <main class="main">
-      <ElCard shadow="always" class="m-5" v-for="nav in NAV_DATA" :key="nav.title">
+      <ElCard v-for="nav in NAV_DATA" :key="nav.title" shadow="always" class="m-5">
         <template #header>
           <div class="card-header">
             <span>{{ nav.title }}</span>
           </div>
         </template>
         <div class="m-nav-links">
-          <NavLink v-for="{ icon, title, desc, link } in nav.items" :key="link" :icon="icon" :title="title" :desc="desc"
-            :link="link" />
+          <NavLink
+            v-for="{ icon, title, desc, link } in nav.items" :key="link" :icon="icon" :title="title" :desc="desc"
+            :link="link"
+          />
         </div>
       </ElCard>
     </main>

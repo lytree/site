@@ -1,15 +1,52 @@
-@use "./transition";
-@use './common';
-@use './base';
-@use './code';
-@use './navbar';
-@use './scrollbar';
-@use './subnav';
-@use './overlay';
-@use './sidebar';
-@use './content';
+.overflow-y-auto {
+  overflow-y: auto !important
+}
 
+.small-scroll-bar::-webkit-scrollbar-track-piece {
+  background: #eee
+}
 
-/**
-* Layout variables
-*/
+.small-scroll-bar::-webkit-scrollbar {
+  width: 8px;
+  height: 6px
+}
+
+.small-scroll-bar::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #cbcbcb
+}
+
+.small-scroll-bar::-webkit-resizer {
+  background-color: #cbcbcb
+}
+
+.small-scroll-bar::-webkit-scrollbar-corner {
+  background-color: #cbcbcb
+}
+
+.small-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb
+}
+
+button::-webkit-scrollbar {
+  display: none
+}
+
+button {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none
+}
+
+.scroll-hide {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-color: transparent transparent;
+  scrollbar-track-color: transparent;
+  -ms-scrollbar-track-color: transparent;
+  scrollbar-width: none
+}
