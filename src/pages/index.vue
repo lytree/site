@@ -4,8 +4,10 @@
 
 <template>
   <div id="wrapper">
-    <img class="logo rounded-full" src="https://blog-1257980368.cos.ap-shanghai.myqcloud.com/avatar.jpg" alt="logo"
-      width="150">
+    <img
+      class="logo rounded-full" src="https://blog-1257980368.cos.ap-shanghai.myqcloud.com/avatar.jpg" alt="logo"
+      width="150"
+    >
     <h1>lytree</h1>
     <h2>回忆的地方</h2>
     <p>
@@ -32,16 +34,12 @@
       </a>
     </p>
   </div>
-  <div class="footer">
-    <GFooter />
-  </div>
-  <canvas />
+  <GFooter />
 </template>
 
 <style lang="scss" scoped>
 #wrapper {
-  --at-apply: gray-700 dark:gray-200;
-  position: absolute;
+  position: fixed;
   top: 38.2%;
   left: 50%;
   z-index: 1;
@@ -58,30 +56,10 @@
   transition: transform 59s 1s cubic-bezier(0.3, 0, 0.8, 1);
 }
 
-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
 .footer {
-  --at-apply: gray-700 dark:gray-200;
-  width: 100%;
-  position: absolute;
   bottom: 10px;
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-@media (max-width: 520px) {
-  .copyright {
-    font-size: 12px;
-  }
 }
 </style>

@@ -76,6 +76,11 @@
   index<br>
   index<br>
   index<br>
+  <GFooter />
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.foooter {
+  position: fixed;
+}
+</style>

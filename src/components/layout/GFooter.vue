@@ -31,7 +31,10 @@
 
 <style  lang="scss" scoped>
 .footer {
-  --at-apply: z-10 md:p-[16px] border-top;
+  --at-apply: z-10 md:p-[16px] w-full border-top;
+
+  font-size: 14px;
+  white-space: nowrap;
 
   .content {
     --at-apply: my-0 mx-auto max-w-[var(--layout-max-width)] text-center;
