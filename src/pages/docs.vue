@@ -6,7 +6,7 @@
     >
       header
     </div>
-    <aside id="aside" class="fixed h-full w-[220px] bg-[#f9f9f9] dark:bg-[#212121]">
+    <aside id="doc-aside" class="fixed h-full w-[220px] bg-[#f9f9f9] dark:bg-[#212121]">
       <div class="aside-wrap">
         <div class="navi-wrap">
           <div class="clearfix" />
@@ -15,23 +15,28 @@
         </div>
       </div>
     </aside>
-    <div class="h-full w-full container">
+    <div class="doc-content h-full w-full container">
       <div class="ml-[220px]">
         <RouterView />
       </div>
     </div>
-    <div class="container">
+    <div class="doc-footer">
       <GFooter />
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .header {
   box-shadow: 0 1px 1px 1px #00000040;
 }
 
 ::deep(.footer) {
   margin-left: 220px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
 }
 </style>
