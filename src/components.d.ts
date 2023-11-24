@@ -8,6 +8,11 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Dark: typeof import('./components/common/ThemeToggler/components/Dark.vue')['default']
+    DAside: typeof import('./components/docs/Layout/DAside.vue')['default']
+    DContent: typeof import('./components/docs/Layout/DContent.vue')['default']
+    DFooter: typeof import('./components/docs/Layout/DFooter.vue')['default']
+    Dheader: typeof import('./components/docs/Layout/Dheader.vue')['default']
+    DHeader: typeof import('./components/docs/Layout/DHeader.vue')['default']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     GFooter: typeof import('./components/layout/GFooter.vue')['default']

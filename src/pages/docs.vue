@@ -1,42 +1,10 @@
 <template>
-  <div class="doc mx-auto my-0 mt-[--layout-nav-header-height] h-full w-full container">
-    <div
-      class="fixed top-0 z-1020 h-[--layout-nav-header-height] rounded-none bg-[#f9f9f9] container dark:bg-[#212121]"
-      role="menu"
-    >
-      header
-    </div>
-    <aside id="doc-aside" class="fixed h-full w-[220px] bg-[#f9f9f9] dark:bg-[#212121]">
-      <div class="aside-wrap">
-        <div class="navi-wrap">
-          <div class="clearfix" />
-          <div class="clearfix navi" />
-          <div id="left_footer" />
-        </div>
-      </div>
-    </aside>
-    <div class="doc-content h-full w-full container">
-      <div class="ml-[220px]">
-        <RouterView />
-      </div>
-    </div>
-    <div class="doc-footer">
-      <GFooter />
-    </div>
+  <div id="alllayout" class="fix-padding skt-loading app app-aside-fix app-header-fixed mx-auto container md:mx-auto">
+    <DHeader />
+    <DAside />
+    <DContent />
+    <DFooter />
   </div>
 </template>
 
-<style lang="scss">
-.header {
-  box-shadow: 0 1px 1px 1px #00000040;
-}
-
-::deep(.footer) {
-  margin-left: 220px;
-  position: absolute;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-}
-</style>
+<style lang="scss"></style>
