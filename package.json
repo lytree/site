@@ -14,26 +14,26 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.6.1",
-    "element-plus": "^2.4.2",
+    "element-plus": "^2.4.3",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
-    "vue": "^3.3.8",
+    "vue": "^3.3.9",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.17",
-    "@iconify-json/carbon": "^1.1.21",
+    "@iconify-json/carbon": "^1.1.24",
     "@mdit-vue/shared": "^1.0.0",
     "@types/markdown-it-link-attributes": "^3.0.4",
-    "@types/node": "^20.10.0",
+    "@types/node": "^20.10.2",
     "@unhead/vue": "^1.8.8",
     "@unocss/eslint-config": "^0.56.5",
     "@unocss/eslint-plugin": "^0.56.5",
     "@unocss/reset": "^0.56.5",
-    "@vitejs/plugin-vue": "^4.5.0",
+    "@vitejs/plugin-vue": "^4.5.1",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "@vue/test-utils": "^2.4.2",
-    "eslint": "^8.54.0",
+    "@vue/test-utils": "^2.4.3",
+    "eslint": "^8.55.0",
     "eslint-define-config": "^1.24.1",
     "jsdom": "^22.1.0",
     "lint-staged": "^14.0.1",
@@ -44,7 +44,7 @@
     "sass": "^1.69.5",
     "shiki": "^0.14.5",
     "simple-git-hooks": "^2.9.0",
-    "taze": "^0.12.1",
+    "taze": "^0.13.0",
     "typescript": "^5.3.2",
     "unocss": "^0.56.5",
     "unplugin-auto-import": "^0.16.7",
@@ -54,7 +54,7 @@
     "vite": "^4.5.0",
     "vite-plugin-vue-devtools": "1.0.0-rc.5",
     "vitest": "^0.34.6",
-    "vue-tsc": "^1.8.22"
+    "vue-tsc": "^1.8.24"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
