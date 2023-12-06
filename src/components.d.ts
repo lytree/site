@@ -12,6 +12,8 @@ declare module 'vue' {
     DContent: typeof import('./components/docs/Layout/DContent.vue')['default']
     DFooter: typeof import('./components/docs/Layout/DFooter.vue')['default']
     DHeader: typeof import('./components/docs/Layout/DHeader.vue')['default']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElRow: typeof import('element-plus/es')['ElRow']
     GFooter: typeof import('./components/layout/GFooter.vue')['default']
     GHeader: typeof import('./components/layout/GHeader.vue')['default']
     Light: typeof import('./components/common/ThemeToggler/components/Light.vue')['default']
