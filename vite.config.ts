@@ -72,7 +72,6 @@ export default defineConfig({
     // see uno.config.ts for config
     UnoCSS(),
     Markdown({
-      headEnabled: 'unhead',
       markdownItOptions: {},
       markdownItUses: [],
       markdownItSetup(md) {
