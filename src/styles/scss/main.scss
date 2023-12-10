@@ -1,55 +1,144 @@
-@import "./bootstrap.scss";
-@import "./docs.scss";
+#main {
 
-.overflow-y-auto {
-  overflow-y: auto !important
-}
+  // 卡片样式
+  .cards {
+    border-radius: 6px;
+    background-color: #00000040;
+    backdrop-filter: blur(10px);
+    transform: scale(1);
+    transition:
+      backdrop-filter 0.3s,
+      transform 0.3s;
 
-.small-scroll-bar::-webkit-scrollbar-track-piece {
-  background: #eee
-}
+    &:hover {
+      transform: scale(1.01);
+    }
 
-.small-scroll-bar::-webkit-scrollbar {
-  width: 8px;
-  height: 6px
-}
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 
-.small-scroll-bar::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: #cbcbcb
-}
+  // 文字超出
+  .text-hidden {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
 
-.small-scroll-bar::-webkit-resizer {
-  background-color: #cbcbcb
-}
+  // 弹窗样式
+  .el-message {
+    --el-message-bg-color: #00000040 !important;
+    --el-message-text-color: #efefef !important;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 25px !important;
+    border-color: transparent !important;
 
-.small-scroll-bar::-webkit-scrollbar-corner {
-  background-color: #cbcbcb
-}
+    .el-message__badge {
+      display: none;
+    }
 
-.small-scroll-bar::-webkit-scrollbar-thumb:hover {
-  background-color: #bbb
-}
+    .el-message__content {
+      white-space: nowrap;
+    }
+  }
 
-button::-webkit-scrollbar {
-  display: none
-}
+  // 进度条样式
+  .el-progress-bar {
+    .el-progress-bar__outer {
+      border-radius: 6px;
+      background-color: #00000020;
 
-button {
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none
-}
+      .el-progress-bar__inner {
+        background-color: #efefef;
+        border-radius: 6px;
+        text-align: center;
+        font-family: "UnidreamLED";
 
-.scroll-hide::-webkit-scrollbar {
-  display: none
-}
+        span {
+          color: #564d59;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
 
-.scroll-hide {
-  -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
-  overflow: -moz-scrollbars-none;
-  scrollbar-color: transparent transparent;
-  scrollbar-track-color: transparent;
-  -ms-scrollbar-track-color: transparent;
-  scrollbar-width: none
+  // Tooltip 样式
+  .el-popper.is-dark {
+    background: #ffffff60 !important;
+    border: 1px solid transparent !important;
+  }
+
+  // 卡片样式
+  .el-card {
+    border-radius: 8px !important;
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+
+    .el-card__header {
+      font-weight: bold;
+      padding: 16px 20px !important;
+      background-color: #ffffff30 !important;
+      border-bottom: 1px solid transparent !important;
+    }
+
+    .el-card__body {
+      padding: 0 !important;
+      background-color: #ffffff10 !important;
+    }
+  }
+
+  // Transition 动画
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  // keyframes 动画
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-blur-in {
+    from {
+      filter: blur(20px) brightness(0.3);
+      transform: scale(1.6);
+    }
+
+    to {
+      filter: blur(0) brightness(1);
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes fade-blur-main-in {
+    from {
+      transform: scale(1.2);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+  // 隐藏元素
+  @media (min-width: 910px) and (max-width: 1200px) {
+    .sm-hidden {
+      display: none;
+    }
+  }
+
+
 }
