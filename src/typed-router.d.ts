@@ -50,6 +50,7 @@ declare module 'vue-router/auto/routes' {
     '/docs/category': RouteRecordInfo<'/docs/category', '/docs/category', Record<never, never>, Record<never, never>>,
     '/docs/tag': RouteRecordInfo<'/docs/tag', '/docs/tag', Record<never, never>, Record<never, never>>,
     '/main': RouteRecordInfo<'/main', '/main', Record<never, never>, Record<never, never>>,
+    '/nav': RouteRecordInfo<'/nav', '/nav', Record<never, never>, Record<never, never>>,
     '/nav/': RouteRecordInfo<'/nav/', '/nav', Record<never, never>, Record<never, never>>,
     '/nav/[...all]': RouteRecordInfo<'/nav/[...all]', '/nav/:all(.*)', { all: ParamValue<true> }, { all: ParamValue<false> }>,
   }

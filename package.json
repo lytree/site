@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.17",
-    "@iconify-json/carbon": "^1.1.25",
-    "@iconify-json/ic": "^1.1.16",
+    "@iconify-json/carbon": "^1.1.26",
+    "@iconify-json/ic": "^1.1.17",
     "@mdit-vue/shared": "^1.0.0",
     "@types/markdown-it-link-attributes": "^3.0.4",
     "@types/node": "^20.10.4",

@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router/auto'
 import { createHead } from '@unhead/vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import 'uno.css'
-import 'element-plus/dist/index.css'
+import 'virtual:uno.css'
+import 'element-plus/theme-chalk/src/message.scss'
 
 const app = createApp(App)
 const router = createRouter({

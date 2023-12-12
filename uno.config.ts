@@ -21,6 +21,10 @@ export default defineConfig({
     ['border-bottom', 'border-b-[1px] border-t-0 border-x-0   light:border-[#3c3c3c1f] dark:border-[#5454547a] border-solid'],
   ],
   theme: {
+    container: {
+      center: true,
+    },
+
     breakpoints: {
       'md': '768px',
       'lg': '1024px',

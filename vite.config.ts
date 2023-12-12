@@ -44,6 +44,7 @@ export default defineConfig({
     }),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
+      resolvers: [ElementPlusResolver()],
       imports: [
         'vue',
         VueRouterAutoImports,
@@ -63,7 +64,11 @@ export default defineConfig({
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      resolvers: [ElementPlusResolver()],
+      resolvers: [ElementPlusResolver(
+        {
+          importStyle: 'sass',
+        },
+      )],
 
       dts: 'src/components.d.ts',
     }),
@@ -97,7 +102,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: '@import "./src/styles/scss/index.scss";',
+        additionalData: '@use "~/styles/scss/index.scss";',
       },
     },
   },
