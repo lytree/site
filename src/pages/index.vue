@@ -8,8 +8,12 @@
       class="logo rounded-full" src="https://blog-1257980368.cos.ap-shanghai.myqcloud.com/avatar.jpg" alt="logo"
       width="150"
     >
-    <h1>lytree</h1>
-    <h2>回忆的地方</h2>
+    <h1 class="text-gray-700 dark:text-gray-200">
+      lytree
+    </h1>
+    <h2 class="text-gray-700 dark:text-gray-200">
+      回忆的地方
+    </h2>
     <p>
       <a href="https://github.com/lytree">
         <img src="https://img.shields.io/badge/GitHub-181717?logo=Github&logoColor=fff" alt="Github">
@@ -37,7 +41,7 @@
   <GFooter />
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #wrapper {
   position: fixed;
   top: 38.2%;

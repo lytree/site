@@ -15,8 +15,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #333;
-  overflow: hidden;
   font-family: sans-serif;
 }
 
@@ -27,13 +25,14 @@ p {
   padding: 0;
   user-select: none;
   text-decoration: none;
-  color: #fff;
   box-sizing: border-box;
+  color: var(--text-color);
 
   &:hover {
     transition: 0.3s;
   }
 }
+
 
 #nprogress {
   pointer-events: none;
@@ -170,7 +169,7 @@ button {
   position: fixed;
   width: 18px;
   height: 18px;
-  background: #fff;
+  background: var(--cursor-color);
   border-radius: 25px;
   opacity: 0.25;
   z-index: 10086;

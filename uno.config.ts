@@ -20,6 +20,39 @@ export default defineConfig({
     ['border-top', 'border-t-[1px] border-b-0 border-x-0   light:border-[#3c3c3c1f] dark:border-[#5454547a] border-solid'],
     ['border-bottom', 'border-b-[1px] border-t-0 border-x-0   light:border-[#3c3c3c1f] dark:border-[#5454547a] border-solid'],
   ],
+  rules: [
+    [
+      RegExp(`^col-?(\\d*)$`),
+      ([, size]: any): any => {
+        if (size) {
+          return {
+            flex: `0 0 ${(size / 12) * 100}%`,
+            width: `${(size / 12) * 100}%`,
+          }
+        }
+        else {
+          return {
+            flex: '1 0 0%',
+          }
+        }
+      },
+      { autocomplete: 'col-<num>' },
+    ],
+    [
+      `col-auto`,
+      {
+        flex: '0 0 auto',
+        width: 'auto',
+      },
+    ],
+    [
+      `col-fill`,
+      {
+        flex: '1 1 auto',
+        width: 'auto',
+      },
+    ],
+  ],
   theme: {
     breakpoints: {
       'md': '768px',
@@ -44,6 +77,9 @@ export default defineConfig({
         'p img': { display: 'block', margin: '0 auto' },
       },
     }),
+    // presetGrid({
+    //   piece: "0px"
+    // })
     // presetWebFonts({
     //   fonts: {
     //     sans: 'DM Sans',

@@ -17,9 +17,13 @@
   --border-color-light: var(--el-border-color-lighter);
   --bg-color-mute: #f2f2f2;
   --site-bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --cursor-color: #1a1a1a;
 }
 
 .dark {
   --bg-color-mute: #2c2c2c;
   --site-bg-color: #1a1a1a;
+  --text-color: #fff;
+  --cursor-color: #fff;
 }
