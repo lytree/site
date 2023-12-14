@@ -1,5 +1,49 @@
 <script lang="ts" setup>
 import { Search } from '@element-plus/icons-vue'
+import type { TabPaneName } from 'element-plus'
+
+const activeName = ref('first')
+const searchText = ref('')
+
+let url = 'https://www.baidu.com/s?wd='
+
+function tabChange(name: TabPaneName) {
+  switch (name) {
+    case 'first':
+      url = 'https://www.baidu.com/s?wd='
+      break
+    case 'second':
+      url = 'https://www.google.com.hk/search?hl=zh-CN&q='
+      break
+    case 'third':
+      url = 'https://bing.com/search?q='
+      break
+    case 'fourth':
+      url = 'https://s.weibo.com/weibo/'
+      break
+    default:
+      break
+  }
+}
+
+onMounted(() => {
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === 'Enter') {
+      // 在这里执行要触发的逻辑
+      window.location.href = `${url}${searchText.value}`
+    }
+  }
+
+  // 添加键盘事件监听
+  document.addEventListener('keydown', handleKeyDown)
+
+  // 在组件卸载时移除事件监听
+  // 考虑到你想要的是在页面卸载前移除事件监听，因此这里使用了`beforeUnmount`
+  // 如果你希望在页面卸载后再移除事件监听，可以使用`onUnmounted`
+  onBeforeUnmount(() => {
+    document.removeEventListener('keydown', handleKeyDown)
+  })
+})
 </script>
 
 <template>
@@ -12,27 +56,36 @@ import { Search } from '@element-plus/icons-vue'
       <!-- 搜索开始 -->
       <div>
         <el-card shadow="always" class="p-20px">
-          <div class="">
-            <el-button-group>
-              <el-button>百度一下</el-button>
-              <el-button>
-                谷歌搜索
-              </el-button>
-              <el-button>
-                影视
-              </el-button>
-              <el-button>
-                微博
-              </el-button>
-            </el-button-group>
-          </div>
-          <form id="super-search-fm" action="https://www.baidu.com/s?wd=" method="get" target="_blank">
-            <el-input placeholder="搜索" class="input-with-select">
-              <template #append>
-                <el-button :icon="Search" />
-              </template>
-            </el-input>
-          </form>
+          <el-tabs v-model="activeName" type="card" @tab-change="tabChange">
+            <el-tab-pane label="百度一下" name="first">
+              <el-input v-model="searchText" placeholder="百度一下" class="input-with-select">
+                <template #append>
+                  <el-button :icon="Search" />
+                </template>
+              </el-input>
+            </el-tab-pane>
+            <el-tab-pane label="谷歌搜索" name="second">
+              <el-input v-model="searchText" placeholder="谷歌搜索" class="input-with-select">
+                <template #append>
+                  <el-button :icon="Search" />
+                </template>
+              </el-input>
+            </el-tab-pane>
+            <el-tab-pane label="Bing" name="third">
+              <el-input v-model="searchText" placeholder="Bing搜索" class="input-with-select">
+                <template #append>
+                  <el-button :icon="Search" />
+                </template>
+              </el-input>
+            </el-tab-pane>
+            <el-tab-pane label="微博" name="fourth">
+              <el-input v-model="searchText" placeholder="微博搜索" class="input-with-select">
+                <template #append>
+                  <el-button :icon="Search" />
+                </template>
+              </el-input>
+            </el-tab-pane>
+          </el-tabs>
         </el-card>
       </div> <!-- 搜索结束 -->
       <div>
@@ -532,7 +585,7 @@ import { Search } from '@element-plus/icons-vue'
 <style lang="scss">
 .nav {
   .label {
-    --at-apply: overflow-hidden rounded-lg px-10px text-14px transition col-1;
+    --at-apply: overflow-hidden rounded-lg px-10px text-14px transition md:col-1 col-3;
 
     svg.icon {
       --at-apply: mx-0 block h-42px w-42px rounded-10px p-8px;

@@ -20,6 +20,8 @@ declare module 'vue' {
     ElOption: typeof import('element-plus/es')['ElOption']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     GFooter: typeof import('./components/layout/GFooter.vue')['default']
     GHeader: typeof import('./components/layout/GHeader.vue')['default']
     Light: typeof import('./components/common/ThemeToggler/components/Light.vue')['default']
