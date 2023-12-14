@@ -171,11 +171,12 @@ button {
   height: 18px;
   background: var(--cursor-color);
   border-radius: 25px;
-  opacity: 0.25;
+  opacity: 0.4;
   z-index: 10086;
   pointer-events: none;
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   transition-property: background, opacity, transform;
+
 
   &.hidden {
     opacity: 0;

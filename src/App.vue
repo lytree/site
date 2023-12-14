@@ -1,9 +1,17 @@
 <script lang="ts" setup>
-import cursorInit from '~/utils/cursor'
+import { cursorInit, cursorRefresh } from '~/utils/cursor'
+import { isDark } from '~/composables/dark'
 onMounted(() => {
   // 自定义鼠标
   cursorInit()
 })
+
+watch(
+  () => isDark.value,
+  () => {
+    cursorRefresh()
+  },
+)
 </script>
 
 <template>

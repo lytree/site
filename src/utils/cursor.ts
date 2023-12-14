@@ -1,4 +1,4 @@
-let mainCursor
+let mainCursor: Cursor
 
 const lerp = (a: number, b: number, n: number) => (1 - n) * a + n * b
 
@@ -10,11 +10,6 @@ function getStyle(el: any, attr: any) {
     console.error(e)
   }
   return false
-}
-
-function cursorInit() {
-  mainCursor = new Cursor()
-  return mainCursor
 }
 
 class Cursor {
@@ -100,6 +95,16 @@ class Cursor {
     }
     requestAnimationFrame(() => this.render())
   }
+}
+export function cursorInit() {
+  mainCursor = new Cursor()
+  return mainCursor
+}
+export function cursorRefresh() {
+  if (!mainCursor)
+    mainCursor = new Cursor()
+
+  mainCursor.refresh()
 }
 
 export default cursorInit

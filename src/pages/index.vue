@@ -41,7 +41,7 @@
   <GFooter />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #wrapper {
   position: fixed;
   top: 38.2%;
