@@ -6,9 +6,9 @@
         target=".navbar-collapse"
       >
         <span class="menu-icons"><svg
-          xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-search"
+          xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-search"
         >
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -16,16 +16,16 @@
       </button>
       <button class="pull-left md:hidden" ui-toggle-class="off-screen animated" target=".app-aside" ui-scroll="app">
         <span class="menu-icons"><svg
-          xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round" class="feather feather-menu"
+          xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-menu"
         >
           <line x1="3" y1="12" x2="21" y2="12" />
           <line x1="3" y1="6" x2="21" y2="6" />
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg></span>
       </button>
-      <a href="https://www.ihewro.com/" class="text-lt navbar-brand">
+      <a href="https://www.ihewro.com/" class="navbar-brand text-lt">
         <span id="navbar-brand-day" class="dark:hidden">
           <img
             src=" https://www.ihewro.com/logo.svg" type="image/svg+xml"
@@ -161,35 +161,31 @@
                 </div> -->
         </li>
       </ul>
-      <form
-        id="searchform1" class="searchform navbar-form navbar-form-sm shift float-left" method="post"
-        role="search"
-      >
+      <form id="searchform1" class="searchform navbar-form navbar-form-sm shift float-left" method="post" role="search">
         <div class="form-group">
           <div class="box-shadow-wrap-normal input-group rounded bg-white-pure">
             <input
               id="search_input" autocomplete="off" type="search" name="s"
-              class="no-borders padder transparent form-control input-sm rounded" placeholder="搜索（Ctrl + K）"
+              class="no-borders transparent form-control input-sm padder rounded" placeholder="搜索（Ctrl + K）"
             >
             <ul
-              id="search_tips_drop"
-              class="dropdown-menu hide search_modal_list small-scroll-bar overflow-y-auto"
+              id="search_tips_drop" class="dropdown-menu search_modal_list small-scroll-bar hide overflow-y-auto"
               style="display:block;top:30px; left: 0px;"
             />
             <span id="search_submit" class="transparent input-group-btn">
               <button type="submit" class="transparent btn-sm btn">
                 <span class="feathericons icon-search"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16px"
-                  height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"
+                  xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-search"
                 >
                   <circle cx="11" cy="11" r="8" />
                   <line x1="21" y1="21" x2="16.65" y2="16.65" />
                 </svg></span>
                 <span class="feathericons hide spin-search animate-spin"><svg
-                  xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24"
-                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="feather feather-loader"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-loader"
                 >
                   <line x1="12" y1="2" x2="12" y2="6" />
                   <line x1="12" y1="18" x2="12" y2="22" />
@@ -204,10 +200,9 @@
             </span>
           </div>
           <a class="btn-sm btn-icon open_search_modal_mobile btn"><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="feather feather-external-link"
+            xmlns="http://www.w3.org/2000/svg" width="16px"
+            height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="feather feather-external-link"
           >
             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
             <polyline points="15 3 21 3 21 9" />
@@ -219,18 +214,15 @@
         <li id="handsome_global_player" class="music-box hidden-xs hidden-sm">
           <div
             class="aplayer aplayer-withlrc aplayer-withlist aplayer-arrow handsome_aplayer player-global"
-            data-preload="false" data-autoplay="false" data-listmaxheight="200px" data-order="list"
-            data-theme="#8ea9a7" data-listfolded="true" data-fix_position="true" data-i_autoplay=""
+            data-preload="false" data-autoplay="false" data-listmaxheight="200px" data-order="list" data-theme="#8ea9a7"
+            data-listfolded="true" data-fix_position="true" data-i_autoplay=""
           />
         </li>
         <li class="dropdown hidden-xs hidden-sm">
-          <a
-            id="global_player_toggle"
-            class="dropdown-toggle feathericons skPlayer-list-switch"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-disc"
+          <a id="global_player_toggle" class="dropdown-toggle feathericons skPlayer-list-switch"><svg
+            xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="feather feather-disc"
           >
             <circle cx="12" cy="12" r="10" />
             <circle cx="12" cy="12" r="3" />
@@ -259,8 +251,8 @@
           >
             <span class="feathericons"><svg
               xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" class="feather feather-key"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" class="feather feather-key"
             >
               <path
                 d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"

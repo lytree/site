@@ -19,7 +19,7 @@ function tabChange(name: TabPaneName) {
       url = 'https://bing.com/search?q='
       break
     case 'fourth':
-      url = 'https://s.weibo.com/weibo/'
+      url = 'https://s.weibo.com/weibo?q='
       break
     default:
       break
