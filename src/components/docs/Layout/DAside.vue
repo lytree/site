@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <aside id="aside" class="gpu-speed app-aside md:hidden-xs light:bg-white" style="visibility: visible;">
+  <aside id="aside" class="gpu-speed app-aside md:hidden-xs" style="visibility: visible;">
     <div class="aside-wrap">
       <div class="navi-wrap scroll-y scroll-hide flex flex-col">
         <!-- user -->
