@@ -1,7 +1,7 @@
-<script setup lang="tsx"></script>
+<script setup lang="ts"></script>
 
 <template>
-  <div class="mx-auto markdown">
+  <div class="markdown-body mx-auto">
     <RouterView />
   </div>
 </template>

@@ -15,14 +15,16 @@ import {
 import AutoImport from 'unplugin-auto-import/vite'
 import LinkAttributes from 'markdown-it-link-attributes'
 import UnoCSS from 'unocss/vite'
-import Shiki from 'markdown-it-shiki'
+import Shikiji from 'markdown-it-shikiji'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import VueDevTools from 'vite-plugin-vue-devtools'
 
 export default defineConfig({
+  assetsInclude: ['**/*.gltf', '**/*.awebp'],
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
+      'assets/': `${path.resolve(__dirname, 'src')}/assets/`,
     },
   },
   plugins: [
@@ -77,16 +79,20 @@ export default defineConfig({
     // see uno.config.ts for config
     UnoCSS(),
     Markdown({
-      markdownItOptions: {},
+      markdownItOptions: {
+        html: true,
+        linkify: true,
+        typographer: true,
+      },
       markdownItUses: [],
       markdownItSetup(md) {
         // https://prismjs.com/
-        md.use(Shiki, {
-          theme: {
+        md.use(() => Shikiji({
+          themes: {
             light: 'vitesse-light',
             dark: 'vitesse-dark',
           },
-        })
+        }))
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
           attrs: {
@@ -95,6 +101,7 @@ export default defineConfig({
           },
         })
       },
+      wrapperClasses: 'markdown-body',
     }),
     VueDevTools(),
   ],
