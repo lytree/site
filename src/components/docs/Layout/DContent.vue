@@ -6,7 +6,7 @@
     <div id="loading" class="butterbar active hide">
       <span class="bar" />
     </div>
-    <main class="app-content-body">
+    <!-- <main class="app-content-body">
       <div class="hbox hbox-auto-xs hbox-auto-sm">
         <div id="post-panel" class="gpu-speed center-part col">
           <header class="lter wrapper-md light:bg-white">
@@ -17,9 +17,8 @@
           </header>
         </div>
       </div>
-    </main>
-    <RouterView />
-    <!-- footer -->
+    </main> -->
+    <slot />
   </div>
 </template>
 

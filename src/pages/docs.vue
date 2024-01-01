@@ -3,7 +3,9 @@
     <div class="mx-auto container md:mx-auto">
       <DHeader class="shadow-2xl dark:bg-#212121 light:bg-#f9f9f9" />
       <DAside class="light:bg-#f9f9f9" />
-      <DContent class="" />
+      <DContent class="">
+        <RouterView />
+      </DContent>
       <DFooter class="light:bg-#f9f9f9" />
     </div>
   </div>
