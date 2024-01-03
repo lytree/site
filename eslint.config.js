@@ -1,18 +1,18 @@
-import antfu from '@antfu/eslint-config'
-import unocss from '@unocss/eslint-plugin'
+import unocss from '@unocss/eslint-config/flat'
 
-export default antfu(
+export default [
   {
-    unocss: true,
+
     rules: {
       'prefer-regex-literals': 'off',
     },
     // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
     ignores: [
       './fixtures',
-      // ...globs
+      'package.json',
+      'pnpm-lock.yaml'
     ],
   },
-  unocss.configs.flat,
+  unocss,
 
-)
+]
